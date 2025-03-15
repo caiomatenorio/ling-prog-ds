@@ -24,12 +24,12 @@ public class App {
 
     public static double askForGrade(Scanner scanner, String message) {
         while (true) {
-            System.out.println(message);
+            System.out.print(message);
 
             if (scanner.hasNextDouble())
                 return scanner.nextDouble();
 
-            System.out.println("Nota inválida. Digite um número .");
+            System.out.println("Nota inválida. Digite um número.");
             scanner.next();
         }
     }
