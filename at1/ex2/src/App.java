@@ -20,7 +20,7 @@ public class App {
         }
     }
 
-    public static double askForSeconds(Scanner scanner) {
+    private static double askForSeconds(Scanner scanner) {
         double seconds;
 
         while (true) {
@@ -38,15 +38,15 @@ public class App {
         }
     }
 
-    public static double calculateDays(double seconds) {
+    private static double calculateDays(double seconds) {
         return seconds / 86400;
     }
 
-    public static double calculateHours(double seconds) {
+    private static double calculateHours(double seconds) {
         return seconds / 3600;
     }
 
-    public static double calculateMinutes(double seconds) {
+    private static double calculateMinutes(double seconds) {
         return seconds / 60;
     }
 }

@@ -22,7 +22,7 @@ public class App {
         }
     }
 
-    public static double askForGrade(Scanner scanner, String message) {
+    private static double askForGrade(Scanner scanner, String message) {
         while (true) {
             System.out.print(message);
 
@@ -34,11 +34,11 @@ public class App {
         }
     }
 
-    public static double calculateArithmeticMean(double grade1, double grade2, double grade3) {
+    private static double calculateArithmeticMean(double grade1, double grade2, double grade3) {
         return (grade1 + grade2 + grade3) / 3;
     }
 
-    public static double calculateWeightedMean(
+    private static double calculateWeightedMean(
             double grade1,
             double grade2,
             double grade3,
