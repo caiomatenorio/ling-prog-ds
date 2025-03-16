@@ -14,7 +14,7 @@ public class App {
 
                 System.out.printf("O valor total das mercadorias com os impostos foi de R$%.2f.\n", finalPrice);
             } else {
-                System.out.printf("Não houve acréscimo de impostos, portanto o valor final foi %.2f \n", rawPrice);
+                System.out.printf("Não houve acréscimo de impostos, portanto o valor final foi %.2f.\n", rawPrice);
             }
         } finally {
             scanner.close();
