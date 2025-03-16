@@ -14,7 +14,7 @@ public class App {
 
                 System.out.printf("O valor total das mercadorias com os impostos foi de R$%.2f.\n", finalPrice);
             } else {
-                System.out.printf("Não houve acréscimo de impostos, portanto o valor final foi %.2f", rawPrice);
+                System.out.printf("Não houve acréscimo de impostos, portanto o valor final foi %.2f \n", rawPrice);
             }
         } finally {
             scanner.close();
@@ -43,9 +43,13 @@ public class App {
     }
 
     private static double applyTaxes(double previousValue) {
-        // V(x) = 500 + 1.5(x - 500)
-        // V(x) = 500 + 1.5x - 750
-        // V(x) = 1.5x - 250
+        /*
+         * Following this base function, we can simplify the process of applying taxes
+         * on the values over R$500
+         * V(x) = 500 + 1.5(x - 500)
+         * V(x) = 500 + 1.5x - 750
+         * V(x) = 1.5x - 250
+         */
         return 1.5 * previousValue - 250;
     }
 }
