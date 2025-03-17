@@ -31,6 +31,8 @@ public class App {
 
                 if (seconds >= 0)
                     return seconds;
+
+                continue;
             }
 
             System.out.println("Valor inválido. Insira um número positivo.");

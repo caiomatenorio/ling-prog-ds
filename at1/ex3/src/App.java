@@ -32,6 +32,8 @@ public class App {
 
                 if (price >= 0)
                     return price;
+
+                continue;
             }
 
             System.out.println("Insira um valor numérico positivo válido.");

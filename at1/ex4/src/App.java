@@ -33,6 +33,8 @@ public class App {
 
                 if (days >= 0)
                     return days;
+
+                continue;
             }
 
             System.out.println("Insira um valor inteiro positivo válido.");
@@ -51,6 +53,8 @@ public class App {
 
                 if (kilometers >= 0)
                     return kilometers;
+
+                continue;
             }
 
             System.out.println("Insira um valor numérico positivo válido.");

@@ -31,6 +31,8 @@ public class App {
 
                 if (odd % 2 == 1)
                     return odd;
+
+                continue;
             }
 
             System.out.println("Insira um inteiro ímpar válido.");
