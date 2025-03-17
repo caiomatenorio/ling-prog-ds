@@ -34,6 +34,7 @@ public class App {
             }
 
             System.out.println("Insira um inteiro ímpar válido.");
+            scanner.next();
         }
     }
 }

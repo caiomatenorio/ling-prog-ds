@@ -36,6 +36,7 @@ public class App {
             }
 
             System.out.println("Insira um valor inteiro positivo válido.");
+            scanner.next();
         }
     }
 

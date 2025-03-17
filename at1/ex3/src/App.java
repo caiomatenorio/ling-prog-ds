@@ -35,6 +35,7 @@ public class App {
             }
 
             System.out.println("Insira um valor numérico positivo válido.");
+            scanner.next();
         }
     }
 
