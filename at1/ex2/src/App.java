@@ -29,8 +29,9 @@ public class App {
             if (scanner.hasNextDouble()) {
                 seconds = scanner.nextDouble();
 
-                if (seconds >= 0)
+                if (seconds >= 0) {
                     return seconds;
+                }
 
                 continue;
             }

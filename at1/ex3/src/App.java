@@ -30,8 +30,9 @@ public class App {
             if (scanner.hasNextDouble()) {
                 price = scanner.nextDouble();
 
-                if (price >= 0)
+                if (price >= 0) {
                     return price;
+                }
 
                 continue;
             }

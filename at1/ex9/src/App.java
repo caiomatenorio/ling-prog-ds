@@ -39,24 +39,26 @@ public class App {
     }
 
     private static double max(double[] numbers) {
-        Double largest = null;
+        Double maximum = null;
 
         for (double i : numbers) {
-            if (largest == null || largest < i)
-                largest = i;
+            if (maximum == null || maximum < i) {
+                maximum = i;
+            }
         }
 
-        return largest;
+        return maximum;
     }
 
     private static double min(double[] numbers) {
-        Double smallest = null;
+        Double minimum = null;
 
         for (double i : numbers) {
-            if (smallest == null || smallest > i)
-                smallest = i;
+            if (minimum == null || minimum > i) {
+                minimum = i;
+            }
         }
 
-        return smallest;
+        return minimum;
     }
 }

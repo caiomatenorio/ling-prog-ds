@@ -20,8 +20,9 @@ public class App {
         while (true) {
             System.out.print("Insira a temperatura em graus Celsius: ");
 
-            if (scanner.hasNextDouble())
+            if (scanner.hasNextDouble()) {
                 return scanner.nextDouble();
+            }
 
             System.out.println("Insira um valor numérico válido.");
             scanner.next();

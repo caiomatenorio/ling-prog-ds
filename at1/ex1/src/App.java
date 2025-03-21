@@ -26,8 +26,9 @@ public class App {
         while (true) {
             System.out.print(message);
 
-            if (scanner.hasNextDouble())
+            if (scanner.hasNextDouble()) {
                 return scanner.nextDouble();
+            }
 
             System.out.println("Nota inválida. Digite um número.");
             scanner.next();

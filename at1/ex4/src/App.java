@@ -12,7 +12,7 @@ public class App {
             kilometers = askForKilometers(scanner);
 
             diaryValue = calculateDiaryValue(days);
-            additionalKilometerValue = calculateAdditionalKilometerValue(kilometers);
+            additionalKilometerValue = calculateAdditionalKilometerValue(kilometers, days);
 
             totalValue = diaryValue + additionalKilometerValue;
 
@@ -31,8 +31,9 @@ public class App {
             if (scanner.hasNextInt()) {
                 days = scanner.nextInt();
 
-                if (days >= 0)
+                if (days >= 0) {
                     return days;
+                }
 
                 continue;
             }
@@ -51,8 +52,9 @@ public class App {
             if (scanner.hasNextDouble()) {
                 kilometers = scanner.nextDouble();
 
-                if (kilometers >= 0)
+                if (kilometers >= 0) {
                     return kilometers;
+                }
 
                 continue;
             }
@@ -65,10 +67,13 @@ public class App {
         return days * 90;
     }
 
-    private static double calculateAdditionalKilometerValue(double kilometers) {
-        if (kilometers <= 100)
-            return 0;
+    private static double calculateAdditionalKilometerValue(double kilometers, int days) {
+        double additionalKilometers = kilometers - (days * 100);
 
-        return (kilometers - 100) * 12;
+        if (additionalKilometers <= 0) {
+            return 0;
+        }
+
+        return additionalKilometers * 12;
     }
 }

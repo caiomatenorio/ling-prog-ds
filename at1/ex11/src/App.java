@@ -83,11 +83,12 @@ public class App {
             if (username.matches("^[a-zA-Z0-9]{3,32}$")) {
                 System.out.println();
                 break;
-            } else if (users.containsKey(username))
+            } else if (users.containsKey(username)) {
                 System.out.println("Este nome de usuário já está em uso." + System.lineSeparator());
-            else
+            } else {
                 System.out.println(
                         "O nome de usuário deve possuir de 3 a 32 caracteres alfanuméricos." + System.lineSeparator());
+            }
         }
 
         while (true) {

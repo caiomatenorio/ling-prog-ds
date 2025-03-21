@@ -29,8 +29,9 @@ public class App {
             if (scanner.hasNextInt()) {
                 odd = scanner.nextInt();
 
-                if (odd % 2 == 1)
+                if (odd % 2 == 1) {
                     return odd;
+                }
 
                 continue;
             }

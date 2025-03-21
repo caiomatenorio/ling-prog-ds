@@ -23,8 +23,9 @@ public class App {
             if (scanner.hasNextInt()) {
                 number = scanner.nextInt();
 
-                if (number > 1)
+                if (number > 1) {
                     return number;
+                }
 
                 continue;
             }
@@ -42,10 +43,12 @@ public class App {
         // dividing n into two factors, if one of them satisfies 2 <= x <= sqrt(n), n is
         // not prime, because the largest factoring possible is n = x * x, therefore the
         // largest factor is x = sqrt(n)
-        for (int d = 2; d <= Math.floor(Math.sqrt(n)); d++)
+        for (int d = 2; d <= Math.floor(Math.sqrt(n)); d++) {
             // d is considered a factor of n only if n is divisible by d (n mod d = 0)
-            if (n % d == 0)
+            if (n % d == 0) {
                 return false;
+            }
+        }
 
         return true;
     }
