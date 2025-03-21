@@ -17,8 +17,9 @@ public class App {
                     case 1:
                         success = login(scanner, users);
 
-                        if (success)
+                        if (success) {
                             return;
+                        }
                         break;
                     case 2:
                         cadastro(scanner, users);
