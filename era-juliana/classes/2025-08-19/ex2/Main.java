@@ -5,10 +5,10 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
 
         try {
-            boolean[] seats = new boolean[10];
+            int[] seats = new int[10];
 
             for (int i = 0; i < seats.length; i++) {
-                seats[i] = false;
+                seats[i] = 0;
             }
 
             do {
@@ -47,41 +47,41 @@ public class Main {
         }
     }
 
-    private static void bookSeat(int seat, boolean[] seats) {
+    private static void bookSeat(int seat, int[] seats) {
         if (seat < 0 || seat >= seats.length) {
             System.out.println("Assento inválido.");
             return;
         }
 
-        if (seats[seat-1]) {
+        if (seats[seat-1] != 0) {
             System.out.println("Assento " + seat + " já está reservado.");
             return;
         }
 
-        seats[seat-1] = true;
+        seats[seat-1] = 1;
         System.out.println("Assento " + seat + " reservado com sucesso.");
     }
 
-    private static void cancelBooking(int seat, boolean[] seats) {
+    private static void cancelBooking(int seat, int[] seats) {
         if (seat < 0 || seat >= seats.length) {
             System.out.println("Assento inválido.");
             return;
         }
 
-        if (!seats[seat-1]) {
+        if (seats[seat-1] == 0) {
             System.out.println("Assento " + seat + " não está reservado.");
             return;
         }
 
-        seats[seat-1] = false;
+        seats[seat-1] = 0;
         System.out.println("Reserva do assento " + seat + " cancelada com sucesso.");
     }
 
-    private static void showSeats(boolean[] seats) {
+    private static void showSeats(int[] seats) {
         System.out.println("Assentos:");
 
-        for (boolean seat : seats) {
-            System.out.print(seat ? "[X] " : "[ ] ");
+        for (int seat : seats) {
+            System.out.print(seat != 0 ? "[X] " : "[ ] ");
         }
 
         System.out.println();
